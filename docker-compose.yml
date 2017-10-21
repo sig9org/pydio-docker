@@ -1,0 +1,12 @@
+version: '2'
+services:
+  pydio:
+    image: sig9/pydio
+    privileged: true
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./files/:/var/www/pydio-core/data/files/
+      - ./personal/:/var/www/pydio-core/data/personal//htpasswd:/etc/nginx/htpasswd
+      - ./mysql:/var/lib/mysql/
