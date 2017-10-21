@@ -54,7 +54,7 @@ RUN update-rc.d mysql defaults
 # ------------------------------------------------------------------------------
 # Install Pydio
 WORKDIR /var/www
-RUN wget http://downloads.sourceforge.net/project/ajaxplorer/pydio/stable-channel/${PYDIO_VERSION}/pydio-core-${PYDIO_VERSION}.zip
+RUN wget https://github.com/pydio/pydio-core/archive/pydio-core-${PYDIO_VERSION}.zip
 RUN unzip pydio-core-${PYDIO_VERSION}.zip
 RUN mv pydio-core-${PYDIO_VERSION} pydio-core
 RUN chown -R www-data:www-data /var/www/pydio-core
