@@ -56,7 +56,7 @@ RUN update-rc.d mysql defaults
 WORKDIR /var/www
 RUN wget https://github.com/pydio/pydio-core/archive/pydio-core-${PYDIO_VERSION}.zip
 RUN unzip pydio-core-${PYDIO_VERSION}.zip
-RUN mv pydio-core-${PYDIO_VERSION} pydio-core
+RUN mv pydio-core-pydio-core-${PYDIO_VERSION} pydio-core
 RUN chown -R www-data:www-data /var/www/pydio-core
 RUN chmod -R 770 /var/www/pydio-core
 RUN chmod 777  /var/www/pydio-core/data/files/
